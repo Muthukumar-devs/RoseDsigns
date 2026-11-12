@@ -24,7 +24,7 @@ export default function HeroCard({ play = false }: HeroCardProps) {
         transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
         className="relative overflow-hidden rounded-[2rem] border border-[#B08A57]/25 bg-[#171514] shadow-2xl"
       >
-        <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square overflow-hidden" style={{ minWidth: 340 }}>
+        <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square overflow-hidden">
 
           <Image
             src="/hero-studio-workspace.jpg"

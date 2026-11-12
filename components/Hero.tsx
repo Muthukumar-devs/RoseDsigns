@@ -159,7 +159,7 @@ export default function Hero({ isLoading = false }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative pt-10 pb-20 md:pt-16 md:pb-28 bg-[#F7F3EC]"
+      className="relative pt-10 pb-20 md:pt-16 md:pb-28 bg-[#F7F3EC] overflow-hidden"
     >
       {/* Ambient background glows — reduced motion, no layout impact */}
       <div

@@ -39,6 +39,7 @@ export default function Navbar() {
     { label: "Our work",   id: "work"     },
     { label: "Services",   id: "services" },
     { label: "The studio", id: "studio"   },
+    { label: "Stats",      id: "stats"    },
     { label: "FAQ",        id: "faq"      },
   ];
 

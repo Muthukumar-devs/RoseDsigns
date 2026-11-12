@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+/* Hide scrollbar on modal scroll containers */
+.modal-scroll::-webkit-scrollbar { display: none; }
+.modal-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #F7F3EC; }
+::-webkit-scrollbar-thumb { background: #D9B1AE; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #A76570; }
+
+:root {
+  /* Primary */
+  --color-rose-black: #171514;
+  --color-ivory: #F7F3EC;
+  --color-antique-rose: #A76570;
+  --color-dusty-blush: #D9B1AE;
+
+  /* Secondary */
+  --color-burgundy: #672D39;
+  --color-british-green: #183B32;
+  --color-midnight-navy: #172536;
+  --color-antique-gold: #B08A57;
+
+  /* Neutral */
+  --color-warm-grey: #E8E2D8;
+  --color-stone: #C9C1B8;
+  --color-soft-taupe: #A79A8F;
+  --color-charcoal: #3C3C3C;
+
+  --background: var(--color-ivory);
+  --foreground: var(--color-rose-black);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Brand Typography */
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-playfair), "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, Georgia, serif;
+  --font-heading: var(--font-playfair), var(--font-cormorant), "Bodoni MT", Didot, "Didot LT STD", Georgia, serif;
+  --font-cormorant: var(--font-cormorant), "Bodoni MT", Didot, Georgia, serif;
+
+  /* Expose palette to Tailwind */
+  --color-rose-black: #171514;
+  --color-ivory: #F7F3EC;
+  --color-antique-rose: #A76570;
+  --color-dusty-blush: #D9B1AE;
+  --color-burgundy: #672D39;
+  --color-british-green: #183B32;
+  --color-midnight-navy: #172536;
+  --color-antique-gold: #B08A57;
+  --color-warm-grey: #E8E2D8;
+  --color-stone: #C9C1B8;
+  --color-soft-taupe: #A79A8F;
+  --color-charcoal: #3C3C3C;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
